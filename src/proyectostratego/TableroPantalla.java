@@ -15,6 +15,9 @@ public class TableroPantalla extends javax.swing.JFrame {
      */
     public TableroPantalla() {
         initComponents();
+        this.setSize(1300, 820);
+        this.setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     /**
@@ -26,19 +29,49 @@ public class TableroPantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fondoTablero = new javax.swing.JLabel();
+        statsArea = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondoTablero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tablero.png"))); // NOI18N
-        getContentPane().add(fondoTablero, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 690, 1170));
-        fondoTablero.getAccessibleContext().setAccessibleParent(fondoTablero);
+        statsArea.setLayout(null);
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        statsArea.add(jTextField1);
+        jTextField1.setBounds(20, 100, 260, 610);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/areaStats.png"))); // NOI18N
+        statsArea.add(jLabel1);
+        jLabel1.setBounds(0, -10, 310, 1058);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 761, Short.MAX_VALUE)
+                .addComponent(statsArea, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(statsArea, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -76,6 +109,8 @@ public class TableroPantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel fondoTablero;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel statsArea;
     // End of variables declaration//GEN-END:variables
 }
