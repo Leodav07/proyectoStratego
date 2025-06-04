@@ -27,9 +27,12 @@ public class TableroPantallla extends javax.swing.JFrame {
     private void initComponents() {
 
         panelEliminaciones = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         panelTablero = new javax.swing.JPanel();
         panelVillanos = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         panelHeroes = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1000, 600));
@@ -39,22 +42,30 @@ public class TableroPantallla extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1000, 600));
 
         panelEliminaciones.setBackground(new java.awt.Color(255, 255, 51));
+        panelEliminaciones.setMaximumSize(new java.awt.Dimension(200, 440));
+        panelEliminaciones.setMinimumSize(new java.awt.Dimension(200, 440));
         panelEliminaciones.setPreferredSize(new java.awt.Dimension(200, 440));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/eliminaciones.png"))); // NOI18N
 
         javax.swing.GroupLayout panelEliminacionesLayout = new javax.swing.GroupLayout(panelEliminaciones);
         panelEliminaciones.setLayout(panelEliminacionesLayout);
         panelEliminacionesLayout.setHorizontalGroup(
             panelEliminacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelEliminacionesLayout.setVerticalGroup(
             panelEliminacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEliminacionesLayout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getContentPane().add(panelEliminaciones, java.awt.BorderLayout.LINE_END);
 
         panelTablero.setBackground(new java.awt.Color(255, 255, 255));
+        panelTablero.setMaximumSize(new java.awt.Dimension(800, 480));
+        panelTablero.setMinimumSize(new java.awt.Dimension(800, 480));
 
         javax.swing.GroupLayout panelTableroLayout = new javax.swing.GroupLayout(panelTablero);
         panelTablero.setLayout(panelTableroLayout);
@@ -70,33 +81,47 @@ public class TableroPantallla extends javax.swing.JFrame {
         getContentPane().add(panelTablero, java.awt.BorderLayout.CENTER);
 
         panelVillanos.setBackground(new java.awt.Color(255, 0, 0));
+        panelVillanos.setMaximumSize(new java.awt.Dimension(1000, 60));
+        panelVillanos.setMinimumSize(new java.awt.Dimension(1000, 60));
         panelVillanos.setPreferredSize(new java.awt.Dimension(1000, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerVillanos.png"))); // NOI18N
 
         javax.swing.GroupLayout panelVillanosLayout = new javax.swing.GroupLayout(panelVillanos);
         panelVillanos.setLayout(panelVillanosLayout);
         panelVillanosLayout.setHorizontalGroup(
             panelVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelVillanosLayout.setVerticalGroup(
             panelVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(panelVillanosLayout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getContentPane().add(panelVillanos, java.awt.BorderLayout.PAGE_START);
 
         panelHeroes.setBackground(new java.awt.Color(51, 0, 255));
+        panelHeroes.setMaximumSize(new java.awt.Dimension(1000, 60));
+        panelHeroes.setMinimumSize(new java.awt.Dimension(1000, 60));
         panelHeroes.setPreferredSize(new java.awt.Dimension(1000, 60));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerHeroes.png"))); // NOI18N
 
         javax.swing.GroupLayout panelHeroesLayout = new javax.swing.GroupLayout(panelHeroes);
         panelHeroes.setLayout(panelHeroesLayout);
         panelHeroesLayout.setHorizontalGroup(
             panelHeroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(panelHeroesLayout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelHeroesLayout.setVerticalGroup(
             panelHeroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(panelHeroesLayout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getContentPane().add(panelHeroes, java.awt.BorderLayout.PAGE_END);
@@ -141,6 +166,9 @@ public class TableroPantallla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panelEliminaciones;
     private javax.swing.JPanel panelHeroes;
     private javax.swing.JPanel panelTablero;
