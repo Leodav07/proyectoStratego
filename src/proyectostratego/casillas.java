@@ -14,17 +14,21 @@ public class casillas extends JLabel {
     
     private int row;
     private int column;
-    
+    private boolean casillaSeleccionada = false;
     
     public casillas(int row, int column){
         this.row = row;
         this.column = column;
-
-        setOpaque(false);
-        
+        setOpaque(false);     
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
         setHorizontalAlignment(CENTER);
         setVerticalAlignment(CENTER);
+    }
+    
+    public void seleccion(){
+        if(casillaSeleccionada){
+            
+        }
     }
     
     public int getColumn(){

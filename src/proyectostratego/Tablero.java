@@ -33,4 +33,5 @@ public class Tablero extends JPanel{
         
     }
     
+    
 }
