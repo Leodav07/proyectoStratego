@@ -19,7 +19,7 @@ public class TableroPantallla extends javax.swing.JFrame {
    
     public TableroPantallla() {
         initComponents();
-       JPanel fondoPanel = new JPanel(){
+      /** JPanel fondoPanel = new JPanel(){
        @Override
            protected void paintComponent(Graphics g){
                super.paintComponent(g);
@@ -33,7 +33,7 @@ public class TableroPantallla extends javax.swing.JFrame {
        this.remove(panelTablero);
        this.add(fondoPanel);
        
-       
+       */
     }
 
     /**
@@ -86,18 +86,7 @@ public class TableroPantallla extends javax.swing.JFrame {
         panelTablero.setBackground(new java.awt.Color(255, 255, 255));
         panelTablero.setMaximumSize(new java.awt.Dimension(800, 480));
         panelTablero.setMinimumSize(new java.awt.Dimension(800, 480));
-
-        javax.swing.GroupLayout panelTableroLayout = new javax.swing.GroupLayout(panelTablero);
-        panelTablero.setLayout(panelTableroLayout);
-        panelTableroLayout.setHorizontalGroup(
-            panelTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panelTableroLayout.setVerticalGroup(
-            panelTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
-        );
-
+        panelTablero.setLayout(new java.awt.GridLayout(10, 10));
         getContentPane().add(panelTablero, java.awt.BorderLayout.CENTER);
 
         panelVillanos.setBackground(new java.awt.Color(255, 0, 0));
