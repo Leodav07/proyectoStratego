@@ -5,30 +5,48 @@
 package proyectostratego;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 
 /**
  *
  * @author hnleo
  */
-public class casillas extends JLabel {
+public class casillas{
     
     private int row;
     private int column;
+    private int id;
+
     private boolean casillaSeleccionada = false;
     
-    public casillas(int row, int column){
-        this.row = row;
-        this.column = column;
-        setOpaque(false);     
-        setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        setHorizontalAlignment(CENTER);
-        setVerticalAlignment(CENTER);
+    public casillas(int id){
+       this.id = id;
+      
+        //Detectar si hizo click
+       /*addMouseListener(new MouseAdapter(){
+        @Override
+        public void mouseClicked(MouseEvent e){
+            seleccion();
+        }
+    });
+*/
     }
     
+    
+    //Funcion para verificar si hizo click
     public void seleccion(){
-        if(casillaSeleccionada){
-            
+        if(!casillaSeleccionada){
+         // setBackground(Color.RED)
+            casillaSeleccionada = true;
+        }else{
+           // setOpaque(false);
+          //  setBackground(new Color(0, 0, 0, 0));
+            casillaSeleccionada = false;
+
         }
+       // repaint();
     }
     
     public int getColumn(){
@@ -36,6 +54,9 @@ public class casillas extends JLabel {
     }
     public int getRow(){
         return row;
+    }
+    public int getId(){
+        return id;
     }
     
 }

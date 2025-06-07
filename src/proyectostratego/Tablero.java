@@ -11,17 +11,19 @@ import java.awt.*;
  */
 public class Tablero extends JPanel{
      private Image imagen;
-    
-    public Tablero(String ruta){
+     casillas casilla[][];
+     private int fila;
+     private int columna;
+     
+    public Tablero(int fila, int columna, String ruta){
         this.imagen = new ImageIcon(getClass().getResource(ruta)).getImage();
-        setLayout(new GridLayout(10, 10));
-        for (int row = 0; row < 10; row++) {
-            for (int column = 0; column < 10; column++) {
-                casillas casilla = new casillas(row, column);
-                add(casilla);
-            }
-        }
+        this.fila = fila;
+        this.columna = columna;
         
+    }
+    
+    public void seleccionCasilla(int fila, int columna, JButton boton){
+        System.out.println("Casilla Seleccionada: ["+fila+"]["+columna+"]");
         
     }
     @Override
