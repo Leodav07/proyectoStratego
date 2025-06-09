@@ -49,8 +49,8 @@ public class Tablero extends JPanel {
             int col = random.nextInt(10);
 
             if (casillasProhibidasHeroes[row][col] == false && botones[row][col].getIcon() == null) {
-                ImageIcon imagen = new ImageIcon(getClass().getResource(imagenesHeroes[imagenColocada]));
-                reescalarImagen(imagen, row, col);
+                ImageIcon images = new ImageIcon(getClass().getResource(imagenesHeroes[imagenColocada]));
+                reescalarImagen(images, row, col);
                 imagenColocada++;
             }
         }
