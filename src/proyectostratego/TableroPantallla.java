@@ -18,6 +18,7 @@ public class TableroPantallla extends javax.swing.JFrame {
      */
    private Tablero iniciar;
    
+   
     public TableroPantallla() {
         initComponents();
         setLocationRelativeTo(null);
@@ -28,7 +29,8 @@ public class TableroPantallla extends javax.swing.JFrame {
     }
     
     private void cargarTablero(){
-        iniciar = new Tablero(10, 10, "/images/tablero.png");
+        botonesConfiguracion();
+        iniciar = new Tablero(10, 10, "/images/tablero.png", botonesArray);
         iniciar.setSize(panelTablero.getWidth(), panelTablero.getHeight());
         iniciar.setBounds(0, 0, panelTablero.getWidth(), panelTablero.getHeight());
         panelTablero.setLayout(new BorderLayout());
@@ -36,11 +38,12 @@ public class TableroPantallla extends javax.swing.JFrame {
  
         panelTablero.repaint();
         panelTablero.revalidate();
-        
-        botonesConfiguracion();
+   
+        iniciar.colocarImagenesHeroes();
  
     }
     public JButton botonesArray[][];
+    
     public void botonesConfiguracion(){
         botonesArray = new JButton[10][10];
         //Casillas de Heroes
@@ -161,6 +164,7 @@ public class TableroPantallla extends javax.swing.JFrame {
 
     private void clickBoton(int fila, int columna){
         iniciar.seleccionCasilla(fila, columna, botonesArray[fila][columna]);
+       
     }
     /**
      * This method is called from within the constructor to initialize the form.
